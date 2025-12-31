@@ -19,5 +19,4 @@ R U2 R' U' R U R'
   experimental-setup-anchor="start"
   experimental-stickering="SecondBlock"
   alg="R U2 R' U' R U R'"
-  experimental-setup-alg="R U' R' U R U2 R'"
-></twisty-player>
+  experimental-setup-alg="R U' R' U R U2 R'"></twisty-player>
