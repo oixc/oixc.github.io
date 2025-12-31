@@ -1,5 +1,7 @@
 ---
-title: Collection of Cube Algorithms
+title: Cube Algorithms
+description: collection of algs
+layout: algorithms
 ---
 
 # Cube Algorithms
@@ -23,4 +25,6 @@ alg="R U2 R' U' R U R'"
 experimental-setup-alg="R U' R' U R U2 R'">
 </twisty-player>
 </div>
+
+# test 
 
