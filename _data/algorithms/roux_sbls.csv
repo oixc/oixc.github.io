@@ -1,0 +1,23 @@
+name,alg,setupalg,stickering
+U UB,U R U2 R' U R U' R',R U R' U' R U2' R' U',SecondBlock
+U UR,R U2 R' U' R U R',R U' R' U R U2 R',SecondBlock
+U UF,M' r U' r' U2 r U r',r' U' r' U2 r U r' M,SecondBlock
+U FR,U2 r U r' U r U' r',r U r' U' r U' r' U2,SecondBlock
+U DF,U2 r U r' F' U' F,F' U F r U' r' U2,SecondBlock
+U UBm,r U' r' U2 r U r',r' U' r' U2 r U r',SecondBlock
+U URm,U r U2 r' U r U' r',r U R' U' r U2 r' U',SecondBlock
+U UFm,M' U R U2 R' U R U' R',R U R' U' R U2' R' U' M,SecondBlock
+U FRm,R U2 R' U' r U r',r' U' r' U R U2 R',SecondBlock
+U DBm,R U' R' U2 M R U R',r U' r' U2' r U R',SecondBlock
+U DFm,U2 R U R' U r U' r',r U r' U' R U' R' U2,SecondBlock
+Up UB,R U R',R U' R',SecondBlock
+Up UR,U' R U' R' U R U R',R' U' R' U' R U R' U,SecondBlock
+Up UF,r U' r' U' r U' r',r U r' U r U r',SecondBlock
+Up UL,R' U2 R2 U R2 U R,R' U' R2 U' R2 U2 R,SecondBlock
+Up DB,M' r U r',r U' r' M,SecondBlock
+Up UFm,r U r',r' U' r',SecondBlock
+Up ULm,U r U r' U2 r U r',r' U' r' U2 r U' r' U',SecondBlock
+Up UBm,r U2 M2 U' R',R U M2 U2 r',SecondBlock
+Up URm,R U' R' U2 F' U' F,F' U F U2 R U R',SecondBlock
+Up FRm,U2 F' U' F U R U' R',R U R' U' F' U F U2,SecondBlock
+Up DFm,R U2 M' U' R',R U M U2 R',SecondBlock
