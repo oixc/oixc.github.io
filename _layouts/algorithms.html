@@ -4,14 +4,18 @@ layout: default
 
 {{ content }}
 
+{% for alg in site.data.algorithms[page.dataset] %}
 <article>
+  {{ alg.name }}
 <twisty-player 
     puzzle="3x3x3"
     background="none"
     tempo-scale=1.25
     experimental-setup-anchor="start"
-    experimental-stickering="SecondBlock"
-    alg="R U2 R' U' R U R'"
-    experimental-setup-alg="R U' R' U R U2 R'">
+    experimental-stickering="{{ alg.stickering }}"
+    alg="{{ alg.alg }}"
+    experimental-setup-alg="{{ alg.setupalg}}">
     </twisty-player>
+  <code>{{ alg.alg }}</code>
 </article>
+{% endfor %}
