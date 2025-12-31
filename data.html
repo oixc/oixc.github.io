@@ -1,0 +1,15 @@
+{% for alg in site.data.algorithms.test %}
+<article>
+  {{ alg.name }}
+<twisty-player 
+    puzzle="3x3x3"
+    background="none"
+    tempo-scale=1.25
+    experimental-setup-anchor="start"
+    experimental-stickering="{{ alg.stickering }}"
+    alg="{{ alg.alg }}"
+    experimental-setup-alg="{{ alg.setupalg}}">
+    </twisty-player>
+  <code>{{ alg.alg }}</code>
+</article>
+{% endfor %}
