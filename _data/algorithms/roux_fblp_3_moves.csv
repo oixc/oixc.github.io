@@ -60,3 +60,11 @@ TC,F2 R F,F' R' F2,FirstBlock
 TF,F' R F,F' R' F,FirstBlock
 TI,R2 r' F,F' r R2,FirstBlock
 TP,F R F,F' R' F',FirstBlock
+UB,F2 U F',F U' F2,FirstBlock
+UO,F' R F2,F2 R' F,FirstBlock
+VA,R2 U2 F',F U2 R2,FirstBlock
+VF,D R D',D R' D',FirstBlock
+VI,R r' F,F' r R',FirstBlock
+VW,F2 r2 F',F r2 F2,FirstBlock
+WM,R' U F2,F2 U' R,FirstBlock
+WV,R2 U F',F U' R2,FirstBlock
