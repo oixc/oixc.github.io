@@ -1,10 +1,9 @@
 ---
 title: Cube Algorithms
 description: collection of algs
-layout: algorithms
-dataset: roux_sbls
+layout: default
 ---
 
-### Roux Second Block Last Square
-
-from [speedcube.db](https://www.speedcubedb.com/a/3x3/SBLS)
+{% for alg in site.algs %}
+  * [{{ alg.title }} - {{ alg.description }}]({{ alg.url }})
+{% endfor %}
