@@ -26,3 +26,19 @@ FB,F U F',F U' F',FirstBlock
 FE,U' r' F,F' r U,FirstBlock
 FO,F2 R F2, F2 R' F2,FirstBlock
 FU,U' R' F,F' R U,FirstBlock
+GC,u' R' u,u' R u,FirstBlock
+GJ,F r F',F r' F',FirstBlock
+GP,u' R2 u, u' R2 u,FirstBlock
+GO,F r' F',F r F',FirstBlock
+GS,F' M' F,F' M F,FirstBlock
+GV,u' R u,u' R' u,FirstBlock
+GW,F r2 F', F r2 F',FirstBlock
+IL,F r' F,F' r F',FirstBlock
+IM,R' U' F2, F2 U R,FirstBlock
+IN,R2 U' F2, F2 U R2,FirstBlock
+IO,R U' F2, F2 U R',FirstBlock
+JA,R U2 F', F U2 R',FirstBlock
+JS,r R2 F, F' R2 r',FirstBlock
+KF,F' R' F, F' R F,FirstBlock
+KJ,R U F', F U' R',FirstBlock
+KN,R2 U F2, F2 U' R2,FirstBlock
