@@ -2,3 +2,7 @@ name,alg,setupalg,stickering
 1_A,U R U' R',R U R' U',SecondBlock
 1_B,U2 R U2 R',R U R' U',SecondBlock
 1_C,R' F R F',R U R' U',SecondBlock
+7_A,M U r U' r',r U r' U' M',SecondBlock
+7_B,R U R' U2 R U' R' U R U' R',r U r' U' M',SecondBlock
+7_C,F' U F U2 R U R',r U r' U' M',SecondBlock
+7_D,U' R' U R U' R U R',r U r' U' M',SecondBlock
