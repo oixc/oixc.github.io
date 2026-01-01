@@ -1,0 +1,5 @@
+name,alg,setupalg,stickering
+AK,U' r F',F r' U,FirstBlock
+AM,U' r' F',F r U,FirstBlock
+AU,U R2 F,F' R2 U',FirstBlock
+AW,U' R2 F',F R2 U,FirstBlock
