@@ -1,0 +1,6 @@
+collections:
+  algs:
+    output: true
+    permalink: /:collection/:path
+
+exclude: ["README.md"]
