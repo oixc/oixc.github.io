@@ -3,3 +3,16 @@ AK,U' r F',F r' U,FirstBlock
 AM,U' r' F',F r U,FirstBlock
 AU,U R2 F,F' R2 U',FirstBlock
 AW,U' R2 F',F R2 U,FirstBlock
+BC,F2 R2 F,F' R2 F2,FirstBlock
+BF,F' R2 F,F' R2 F,FirstBlock
+BI,R' r' F,F' r R,FirstBlock
+BK,U2 r F',F r' U2,FirstBlock
+BP,F R2 F,F' R2 F',FirstBlock
+BS,R r F,F' r' R,FirstBlock
+BW,U2 r2 F',F r2 U2,FirstBlock
+CE,U r' F',F r U',FirstBlock
+CF,D R' D',D R D',FirstBlock
+CK,U r F',F r' U',FirstBlock
+CO,R U F2,F2 U' R',FirstBlock
+CU,U' R2 F,F' R2 U,FirstBlock
+CW,U r2 F',F r2 U',FirstBlock
