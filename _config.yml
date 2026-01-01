@@ -1,9 +1,11 @@
-title: Cube Algorithms
-description: collection of algs
+title: "Cube Algorithms"
+description: "collection of algs"
+url: "https://oixc.github.io"
+baseurl: ""
 
 collections:
   algs:
     output: true
     permalink: /:collection/:path
 
-exclude: ["README.md"]
+exclude: ["README.md", "LICENSE"]
