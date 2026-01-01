@@ -1,2 +1,4 @@
 name,alg,setupalg,stickering
-1,U R U' R',R U R' U',SecondBlock
+1_A,U R U' R',R U R' U',SecondBlock
+1_B,U2 R U2 R',R U R' U',SecondBlock
+1_C,R' F R F',R U R' U',SecondBlock
