@@ -47,3 +47,16 @@ LK,F2 r' F, F' r F2,FirstBlock
 ML,F' r F',F r' F,FirstBlock
 MQ, F' r' F', F r F,FirstBlock
 MW,F' r2 F',F r2 F,FirstBlock
+NU,U R' F,F' R U',FirstBlock
+PB,F' U F',F U' F,FirstBlock
+QC,F U F2,F2 U' F',FirstBlock
+QF,D R2 D',D R2 D',FirstBlock
+QT,R' U F',F U' R,FirstBlock
+QU,F' U F2,F2 U' F,FirstBlock
+RQ,U R' F2,F2 R U',FirstBlock
+RU,U2 R' F,F' R U2,FirstBlock
+TA,R' U2 F',F U2 R,FirstBlock
+TC,F2 R F,F' R' F2,FirstBlock
+TF,F' R F,F' R' F,FirstBlock
+TI,R2 r' F,F' r R2,FirstBlock
+TP,F R F,F' R' F',FirstBlock
