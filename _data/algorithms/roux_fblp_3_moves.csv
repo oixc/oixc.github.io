@@ -1,70 +1,70 @@
-name,alg,setupalg,stickering
-AK,U' r F',F r' U,FirstBlock
-AM,U' r' F',F r U,FirstBlock
-AU,U R2 F,F' R2 U',FirstBlock
-AW,U' r2 F',F r2 U,FirstBlock
-BC,F2 R2 F,F' R2 F2,FirstBlock
-BF,F' R2 F,F' R2 F,FirstBlock
-BI,R' r' F,F' r R,FirstBlock
-BK,U2 r F',F r' U2,FirstBlock
-BP,F R2 F,F' R2 F',FirstBlock
-BS,R r F,F' r' R',FirstBlock
-BW,U2 r2 F',F r2 U2,FirstBlock
-CE,U r' F',F r U',FirstBlock
-CF,D R' D',D R D',FirstBlock
-CK,U r F',F r' U',FirstBlock
-CO,R U F2,F2 U' R',FirstBlock
-CU,U' R2 F,F' R2 U,FirstBlock
-CW,U r2 F',F r2 U',FirstBlock
-DU,U2 R2 F,F' R2 U2,FirstBlock
-EC,F U2 F2,F2 U2 F',FirstBlock
-EM,R' U2 F2,F2 U2 R,FirstBlock
-EN,R2 U2 F2,F2 U2 R2,FirstBlock
-EQ,R U2 F2,F2 U2 R',FirstBlock
-EU,F' U2 F2,F2 U2 F,FirstBlock
-FB,F U F',F U' F',FirstBlock
-FE,U' r' F,F' r U,FirstBlock
-FO,F2 R F2, F2 R' F2,FirstBlock
-FU,U' R' F,F' R U,FirstBlock
-GC,u' R' u,u' R u,FirstBlock
-GJ,F r F',F r' F',FirstBlock
-GP,u' R2 u, u' R2 u,FirstBlock
-GO,F r' F',F r F',FirstBlock
-GS,F' M' F,F' M F,FirstBlock
-GV,u' R u,u' R' u,FirstBlock
-GW,F r2 F', F r2 F',FirstBlock
-IL,F r' F,F' r F',FirstBlock
-IM,R' U' F2, F2 U R,FirstBlock
-IN,R2 U' F2, F2 U R2,FirstBlock
-IO,R U' F2, F2 U R',FirstBlock
-JA,R U2 F', F U2 R',FirstBlock
-JS,r R2 F, F' R2 r',FirstBlock
-KF,F' R' F, F' R F,FirstBlock
-KJ,R U F', F U' R',FirstBlock
-KN,R2 U F2, F2 U' R2,FirstBlock
-LC,F U' F2, F2 U F',FirstBlock
-LK,F2 r' F, F' r F2,FirstBlock
-ML,F' r F',F r' F,FirstBlock
-MQ, F' r' F', F r F,FirstBlock
-MW,F' r2 F',F r2 F,FirstBlock
-NU,U R' F,F' R U',FirstBlock
-PB,F' U F',F U' F,FirstBlock
-QC,F U F2,F2 U' F',FirstBlock
-QF,D R2 D',D R2 D',FirstBlock
-QT,R' U F',F U' R,FirstBlock
-QU,F' U F2,F2 U' F,FirstBlock
-RQ,U R' F2,F2 R U',FirstBlock
-RU,U2 R' F,F' R U2,FirstBlock
-TA,R' U2 F',F U2 R,FirstBlock
-TC,F2 R F,F' R' F2,FirstBlock
-TF,F' R F,F' R' F,FirstBlock
-TI,R2 r' F,F' r R2,FirstBlock
-TP,F R F,F' R' F',FirstBlock
-UB,F2 U F',F U' F2,FirstBlock
-UO,F' R F2,F2 R' F,FirstBlock
-VA,R2 U2 F',F U2 R2,FirstBlock
-VF,D R D',D R' D',FirstBlock
-VI,R r' F,F' r R',FirstBlock
-VW,F2 r2 F',F r2 F2,FirstBlock
-WM,R' U F2,F2 U' R,FirstBlock
-WV,R2 U F',F U' R2,FirstBlock
+name,name_cuberoot,corner_LFD,edge_LF,alg,setupalg,stickering,move_count,move_1,move_2,move_3
+BDR-FU,TI,BDR,FU,R2 r' F,F' r R2,FirstBlock,3,R2,r',F
+BDR-LF,TF,BDR,LF,F' R F,F' R' F,FirstBlock,3,F',R,F
+BDR-RF,TP,BDR,RF,F R F,F' R' F',FirstBlock,3,F,R,F
+BDR-UB,TA,BDR,UB,R' U2 F',F U2 R,FirstBlock,3,R',U2,F'
+BDR-UF,TC,BDR,UF,F2 R F,F' R' F2,FirstBlock,3,F2,R,F
+BRU-BR,QT,BRU,BR,R' U F',F U' R,FirstBlock,3,R',U,F'
+BRU-DF,QU,BRU,DF,F' U F2,F2 U' F,FirstBlock,3,F',U,F2
+BRU-LF,QF,BRU,LF,D R2 D',D R2 D',FirstBlock,3,D,R2,D'
+BRU-UF,QC,BRU,UF,F U F2,F2 U' F',FirstBlock,3,F,U,F2
+BUL-BU,RQ,BUL,BU,U R' F2,F2 R U',FirstBlock,3,U,R',F2
+BUL-DF,RU,BUL,DF,U2 R' F,F' R U2,FirstBlock,3,U2,R',F
+DFR-DB,VW,DFR,DB,F2 r2 F',F r2 F2,FirstBlock,3,F2,r2,F'
+DFR-FU,VI,DFR,FU,R r' F,F' r R',FirstBlock,3,R,r',F
+DFR-LF,VF,DFR,LF,D R D',D R' D',FirstBlock,3,D,R,D'
+DFR-UB,VA,DFR,UB,R2 U2 F',F U2 R2,FirstBlock,3,R2,U2,F'
+DLF-RD,UO,DLF,RD,F' R F2,F2 R' F,FirstBlock,3,F',R,F2
+DLF-UR,UB,DLF,UR,F2 U F',F U' F2,FirstBlock,3,F2,U,F'
+DRB-DR,WV,DRB,DR,R2 U F',F U' R2,FirstBlock,3,R2,U,F'
+DRB-RU,WM,DRB,RU,R' U F2,F2 U' R,FirstBlock,3,R',U,F2
+FDL-FD,LK,FDL,FD,F2 r' F,F' r F2,FirstBlock,3,F2,r',F
+FDL-UF,LC,FDL,UF,F U' F2,F2 U F',FirstBlock,3,F,U',F2
+FLU-FL,IL,FLU,FL,F r' F,F' r F',FirstBlock,3,F,r',F
+FLU-RB,IN,FLU,RB,R2 U' F2,F2 U R2,FirstBlock,3,R2,U',F2
+FLU-RD,IO,FLU,RD,R U' F2,F2 U R',FirstBlock,3,R,U',F2
+FLU-RU,IM,FLU,RU,R' U' F2,F2 U R,FirstBlock,3,R',U',F2
+FRD-FR,KJ,FRD,FR,R U F',F U' R',FirstBlock,3,R,U,F'
+FRD-LF,KF,FRD,LF,F' R' F,F' R F,FirstBlock,3,F',R',F
+FRD-RB,KN,FRD,RB,R2 U F2,F2 U' R2,FirstBlock,3,R2,U,F2
+FUR-BD,JS,FUR,BD,r R2 F,F' R2 r',FirstBlock,3,r,R2,F
+FUR-UB,JA,FUR,UB,R U2 F',F U2 R',FirstBlock,3,R,U2,F'
+LBU-BU,EQ,LBU,BU,R U2 F2,F2 U2 R',FirstBlock,3,R,U2,F2
+LBU-DF,EU,LBU,DF,F' U2 F2,F2 U2 F,FirstBlock,3,F',U2,F2
+LBU-RB,EN,LBU,RB,R2 U2 F2,F2 U2 R2,FirstBlock,3,R2,U2,F2
+LBU-RU,EM,LBU,RU,R' U2 F2,F2 U2 R,FirstBlock,3,R',U2,F2
+LBU-UF,EC,LBU,UF,F U2 F2,F2 U2 F',FirstBlock,3,F,U2,F2
+LFD-BD,GS,LFD,BD,F' M' F,F' M F,FirstBlock,3,F',M',F
+LFD-DB,GW,LFD,DB,F r2 F',F r2 F',FirstBlock,3,F,r2,F'
+LFD-DR,GV,LFD,DR,u' R u,u' R' u,FirstBlock,3,u',R,u
+LFD-FR,GJ,LFD,FR,F r F',F r' F',FirstBlock,3,F,r,F'
+LFD-RD,GO,LFD,RD,F r' F',F r F',FirstBlock,3,F,r',F'
+LFD-RF,GP,LFD,RF,u' R2 u,u' R2 u,FirstBlock,3,u',R2,u
+LFD-UF,GC,LFD,UF,u' R' u,u' R u,FirstBlock,3,u',R',u
+LUF-DF,FU,LUF,DF,U' R' F,F' R U,FirstBlock,3,U',R',F
+LUF-LU,FE,LUF,LU,U' r' F,F' r U,FirstBlock,3,U',r',F
+LUF-RD,FO,LUF,RD,F2 R F2,F2 R' F2,FirstBlock,3,F2,R,F2
+LUF-UR,FB,LUF,UR,F U F',F U' F',FirstBlock,3,F,U,F'
+RDF-UR,PB,RDF,UR,F' U F',F U' F,FirstBlock,3,F',U,F'
+RFU-BU,MQ,RFU,BU,F' r' F',F r F,FirstBlock,3,F',r',F'
+RFU-DB,MW,RFU,DB,F' r2 F',F r2 F,FirstBlock,3,F',r2,F'
+RFU-FL,ML,RFU,FL,F' r F',F r' F,FirstBlock,3,F',r,F'
+RUB-DF,NU,RUB,DF,U R' F,F' R U',FirstBlock,3,U,R',F
+UBR-BD,BS,UBR,BD,R r F,F' r' R',FirstBlock,3,R,r,F
+UBR-DB,BW,UBR,DB,U2 r2 F',F r2 U2,FirstBlock,3,U2,r2,F'
+UBR-FD,BK,UBR,FD,U2 r F',F r' U2,FirstBlock,3,U2,r,F'
+UBR-FU,BI,UBR,FU,R' r' F,F' r R,FirstBlock,3,R',r',F
+UBR-LF,BF,UBR,LF,F' R2 F,F' R2 F,FirstBlock,3,F',R2,F
+UBR-RF,BP,UBR,RF,F R2 F,F' R2 F',FirstBlock,3,F,R2,F
+UBR-UF,BC,UBR,UF,F2 R2 F,F' R2 F2,FirstBlock,3,F2,R2,F
+UFL-DF,DU,UFL,DF,U2 R2 F,F' R2 U2,FirstBlock,3,U2,R2,F
+ULB-DB,AW,ULB,DB,U' r2 F',F r2 U,FirstBlock,3,U',r2,F'
+ULB-DF,AU,ULB,DF,U R2 F,F' R2 U',FirstBlock,3,U,R2,F
+ULB-FD,AK,ULB,FD,U' r F',F r' U,FirstBlock,3,U',r,F'
+ULB-RU,AM,ULB,RU,U' r' F',F r U,FirstBlock,3,U',r',F'
+URF-DB,CW,URF,DB,U r2 F',F r2 U',FirstBlock,3,U,r2,F'
+URF-DF,CU,URF,DF,U' R2 F,F' R2 U,FirstBlock,3,U',R2,F
+URF-FD,CK,URF,FD,U r F',F r' U',FirstBlock,3,U,r,F'
+URF-LF,CF,URF,LF,D R' D',D R D',FirstBlock,3,D,R',D'
+URF-LU,CE,URF,LU,U r' F',F r U',FirstBlock,3,U,r',F'
+URF-RD,CO,URF,RD,R U F2,F2 U' R',FirstBlock,3,R,U,F2
