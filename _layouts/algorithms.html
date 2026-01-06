@@ -4,6 +4,8 @@ layout: default
 
 {{ content }}
 
+
+<div id="algContainer">
 {% for alg in site.data.algorithms[page.dataset] %}
 <article
   {% for col in page.dataset_columns %}
@@ -23,3 +25,4 @@ layout: default
   <code>{{ alg.alg }}</code>
 </article>
 {% endfor %}
+</div>
