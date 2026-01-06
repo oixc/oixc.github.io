@@ -1,3 +1,9 @@
 twisty-player {
   width: 100%;
 }
+
+#algContainer {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
