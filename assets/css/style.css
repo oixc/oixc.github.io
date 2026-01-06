@@ -7,3 +7,19 @@ twisty-player {
   flex-direction: column; 
   gap: 10px;
 }
+
+.sort-btn::after {
+  content: ' ';
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.sort-btn[data-dir="asc"]::after {
+  content: ' ↓';
+}
+
+.sort-btn[data-dir="desc"]::after {
+  content: ' ↓';
+  transform: rotate(180deg);
+}
