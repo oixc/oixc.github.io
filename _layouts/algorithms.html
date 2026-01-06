@@ -5,8 +5,12 @@ layout: default
 {{ content }}
 
 {% for alg in site.data.algorithms[page.dataset] %}
-<article>
-  {{ alg.name }}
+<article
+  {% for col in page.dataset_columns %}
+  data-{{ col }}="{{ alg[col] }}"
+  {% endfor %}
+  >
+  <p>{{ alg.name }}</p>
 <twisty-player 
     puzzle="3x3x3"
     background="none"
