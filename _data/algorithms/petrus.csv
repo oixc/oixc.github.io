@@ -1,0 +1,5 @@
+name,alg,setupalg,stickering,petrus_step
+Sune,R U R' U R U2' R',R U2 R' U' R U' R',COLL,6_last_layer_orient_corners
+AntiSune,R U2' R' U' R U' R',R U R' U R U2' R',COLL,6_last_layer_orient_corners
+Allan,F2 U' R L' F2 R' L U' F2,F2' U L' R F2' L R' U F2',EPLL,7_last_layer_permute_edges
+Niklas,R U' L' U R' U' L U,U' L' U R U' L U R',CPLL,5_last_layer_permute_cornersOLL
