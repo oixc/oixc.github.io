@@ -1,0 +1,10 @@
+name,alg,setupalg,stickering,orient_or_permute,comment
+Pi CMLL,F (R U R' U') (R U R' U') F',F (U R U' R') (U R U' R') F',CMLL,orient,
+H CMLL,(R U R' U R) U' (R' U R U2 R'),R U2 R' U' R U R' U' R U' R',CMLL,orient,double Sune with cancellation
+Anti Sune,R U2' R' U' R U' R',R U R' U R U2' R',CMLL,orient,
+Sune,R U R' U R U2' R',R U2 R' U' R U' R',CMLL,orient,
+U CMLL,F (R U R' U') F',F (U R U' R') F',CMLL,orient,
+T CMLL,(R U R' U') (R' F R F'),(F R' F' R) (U R U' R'),CMLL,orient,Inverse of L CMLL
+L CMLL,(F R' F' R) (U R U' R'),(R U R' U') (R' F R F'),CMLL,orient,Inverse of T CMLL
+J Perm,(R U R' F') (R U R' U') (R' F R2 U' R' U'),(R' F R2 U' R' U')' (R U R' U')' (R U R' F')',CMLL,permute,Adjacent Swap
+Y Perm,F R U' R' U' R U R' F' R U R' U' R' F R F',F R' F' R U R U' R' F R U' R' U R U R' F',CMLL,permute,Diagonal Swap (can be replaced with two J Perm)
