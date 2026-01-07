@@ -16,6 +16,22 @@ article h4:first-child {
   gap: 10px;
 }
 
+#algContainer article p {
+  font-style: italic;
+  margin: 0;
+}
+
+#algContainer[data-view="compact"] twisty-player,
+#algContainer[data-view="compact"] p {
+    display: none;
+}
+
+#algContainer[data-view="training"] h4,
+#algContainer[data-view="training"] p,
+#algContainer[data-view="training"] code {
+    display: none;
+}
+
 .sort-btn::after {
   content: ' ';
   display: inline-block;
