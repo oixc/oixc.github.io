@@ -3,10 +3,21 @@ layout: default
 ---
 
 <article>
-{{ content }}
+  <h4>info</h4>
+  {{ content }}
 </article>
 
 <article>
+  <h4>view</h4>
+  <select id="viewSelector">
+    <option value="normal">normal</option>
+    <option value="compact">compact</option>
+    <option value="training">training</option>
+  </select>
+</article>
+
+<article>
+  <h4>filter</h4>
   {% for filter in page.filters %}
 <details class="filter-group" name="filter" data-filter-key="{{ filter.key }}">
   <summary>{{ filter.name }}</summary>
@@ -17,20 +28,24 @@ layout: default
 </article>
 
 <article>
+  <h4>sort</h4>
   {% for sort in page.sorts %}
   <button class="sort-btn" data-sort-key="{{ sort.key }}">{{ sort.name }}</button>
   {% endfor %}
   <button class="sort-btn" data-sort-key="random">randomize</button>
 </article>
 
-<div id="algContainer">
+<div id="algContainer" data-view="normal">
 {% for alg in site.data.algorithms[page.dataset] %}
 <article
   {% for col in page.dataset_columns %}
-  data-{{ col }}="{{ alg[col] }}"
-  {% endfor %}
+  data-{{ col }}="{{ alg[col] }}"{% endfor %}
   >
-  <p>{{ alg.name }}</p>
+<h4>{{ alg.name }}</h4>
+{% if alg.description %}
+  <p>{{ alg.dh4cription }}</p>
+{% endif %}
+<code>{{ alg.alg }}</code>
 <twisty-player 
     puzzle="3x3x3"
     background="none"
@@ -39,8 +54,17 @@ layout: default
     experimental-stickering="{{ alg.stickering }}"
     alg="{{ alg.alg }}"
     experimental-setup-alg="{{ alg.setupalg}}">
-    </twisty-player>
-  <code>{{ alg.alg }}</code>
+</twisty-player>
 </article>
 {% endfor %}
 </div>
+
+<script>
+  const selector = document.getElementById('viewSelector');
+  const container = document.getElementById('algContainer');
+  
+  selector.addEventListener('change', (e) => {
+    container.dataset.view = e.target.value;
+  });
+
+</script>
