@@ -32,7 +32,7 @@ layout: default
   {% for sort in page.sorts %}
   <button class="sort-btn" data-sort-key="{{ sort.key }}">{{ sort.name }}</button>
   {% endfor %}
-  <button class="sort-btn" data-sort-key="random">randomize</button>
+  <button class="sort-btn" data-sort-key="random" id="resetTwistyBtn">randomize</button>
 </article>
 
 <div id="algContainer" data-view="normal">
@@ -60,11 +60,22 @@ layout: default
 </div>
 
 <script>
+  const players = document.querySelectorAll('#algContainer twisty-player');
+  function resetTwisty() {
+    players.forEach(player => {
+        player.jumpToStart();
+        player.cameraLatitude = 45;
+        player.cameraLongitude = 30;
+    });
+  };
+  document.getElementById('resetTwistyBtn').addEventListener('click', resetTwisty);
+</script>
+
+<script>
   const selector = document.getElementById('viewSelector');
   const container = document.getElementById('algContainer');
   
   selector.addEventListener('change', (e) => {
     container.dataset.view = e.target.value;
   });
-
 </script>
