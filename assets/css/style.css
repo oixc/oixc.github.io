@@ -2,6 +2,14 @@ twisty-player {
   width: 100%;
 }
 
+article {
+  padding: 0.5rem;
+}
+
+article h4:first-child {
+  margin: 0;
+}
+
 #algContainer {
   display: flex;
   flex-direction: column; 
