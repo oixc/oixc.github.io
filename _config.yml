@@ -2,6 +2,7 @@ title: "Cube Algorithms"
 description: "collection of algs"
 url: "https://oixc.github.io"
 baseurl: ""
+github_repository_url: "https://github.com/oixc/oixc.github.io/"
 
 collections:
   algs:
@@ -9,3 +10,20 @@ collections:
     permalink: /:collection/:path
 
 exclude: ["README.md", "LICENSE"]
+
+defaults:
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "algs"
+    values:
+      layout: "algorithms"
+      dataset_columns: [name]
+      sorts:
+          - name: name
+            key: comment
+      filters:
+          - name: name
+            key: name
