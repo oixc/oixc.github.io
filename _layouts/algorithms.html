@@ -2,8 +2,25 @@
 layout: default
 ---
 
+<article>
 {{ content }}
+</article>
 
+<article>
+  {% for filter in page.filters %}
+<details class="filter-group" name="filter" data-filter-key="{{ filter.key }}">
+  <summary>{{ filter.name }}</summary>
+  <button type="button" data-select-action="all">all</button>
+  <button type="button" data-select-action="none">none</button>
+</details>
+  {% endfor %}
+</article>
+
+<article>
+  {% for sort in page.sorts %}
+  <button class="sort-btn" data-sort-key="{{ sort.key }}">{{ sort.name }}</button>
+  {% endfor %}
+</article>
 
 <div id="algContainer">
 {% for alg in site.data.algorithms[page.dataset] %}
