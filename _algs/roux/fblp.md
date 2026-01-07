@@ -11,7 +11,6 @@ filters:
       key: edge_lf
     - name: moves
       key: move_count
-
 sorts:
     - name: corners
       key: corner_lfd‎
