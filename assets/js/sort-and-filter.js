@@ -20,17 +20,57 @@ function init() {
   filterGroups = document.querySelectorAll(".filter-group");
 
   // 2. Setup UI
+  getSessionStorage();
   initFilters();
   bindEvents();
+  
+  // 3. Initial Render
   performSort();
   syncVisibility();
+  
+  // Update icons if sort was loaded from storage
+  const activeBtn = Array.from(sortButtons).find(btn => btn.dataset.sortKey === sortState.sortKey);
+  if (activeBtn) updateSortIcons(activeBtn);
 }
 
+/**
+ * Persistence Logic
+ */
+function getSessionStorage() {
+  const savedSort = sessionStorage.getItem('sortState');
+  if (savedSort) {
+    Object.assign(sortState, JSON.parse(savedSort));
+  }
+}
+
+function setSessionStorage() {
+  sessionStorage.setItem('sortState', JSON.stringify(sortState));
+  
+  const filterState = Array.from(filterGroups).map(group => ({
+    key: group.dataset.filterKey,
+    checked: getCheckedValues(group)
+  }));
+  sessionStorage.setItem('filterState', JSON.stringify(filterState));
+}
+
+/**
+ * Initialization Logic
+ */
 function initFilters() {
+  const savedFilters = JSON.parse(sessionStorage.getItem('filterState') || "[]");
+
   filterGroups.forEach(group => {
     const key = group.dataset.filterKey;
     const values = getUniqueValues(key);
-    group.insertAdjacentHTML('beforeend', renderCheckboxes(values));
+    const savedForGroup = savedFilters.find(f => f.key === key)?.checked;
+
+    const checkboxesHtml = values.map(val => {
+      // Respect saved state, otherwise default to checked
+      const isChecked = savedForGroup ? savedForGroup.includes(val) : true;
+      return renderCheckbox(val, isChecked);
+    }).join('');
+
+    group.insertAdjacentHTML('beforeend', checkboxesHtml);
   });
 }
 
@@ -38,15 +78,18 @@ function getUniqueValues(key) {
   return [...new Set(items.map(el => el.dataset[key]))].sort();
 }
 
-function renderCheckboxes(values) {
-  return values.map(val => `
+function renderCheckbox(val, isChecked) {
+  return `
     <label>
-      <input type="checkbox" value="${val}" checked>
+      <input type="checkbox" value="${val}" ${isChecked ? 'checked' : ''}>
       ${val}
     </label>
-  `).join('');
+  `;
 }
 
+/**
+ * Event Binding
+ */
 function bindEvents() {
   bindSortEvents();
   bindFilterEvents();
@@ -54,16 +97,36 @@ function bindEvents() {
 
 function bindSortEvents() {
   sortButtons.forEach(btn => {
-    btn.addEventListener('click', () => handleSortClick(btn));
+    btn.addEventListener('click', () => {
+      handleSortClick(btn);
+      setSessionStorage();
+    });
   });
 }
 
 function bindFilterEvents() {
   filterGroups.forEach(group => {
-    group.addEventListener('change', syncVisibility);
+    // Listen for checkbox changes
+    group.addEventListener('change', () => {
+      syncVisibility();
+      setSessionStorage();
+    });
+
+    // Listen for All/None button clicks (Event Delegation)
+    group.addEventListener('click', (e) => {
+      const action = e.target.dataset.selectAction;
+      if (!action) return;
+
+      toggleGroupCheckboxes(group, action === 'all');
+      syncVisibility();
+      setSessionStorage();
+    });
   });
 }
 
+/**
+ * Sorting & Filtering Logic
+ */
 function handleSortClick(btn) {
   const newKey = btn.dataset.sortKey;
   updateSortState(newKey);
@@ -84,6 +147,12 @@ function updateSortState(newKey) {
 function updateSortIcons(activeBtn) {
   sortButtons.forEach(btn => delete btn.dataset.dir);
   activeBtn.dataset.dir = sortState.ascending ? "asc" : "desc";
+}
+
+function toggleGroupCheckboxes(group, shouldCheck) {
+  group.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+    cb.checked = shouldCheck;
+  });
 }
 
 function performSort() {
