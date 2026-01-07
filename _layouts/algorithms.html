@@ -20,6 +20,7 @@ layout: default
   {% for sort in page.sorts %}
   <button class="sort-btn" data-sort-key="{{ sort.key }}">{{ sort.name }}</button>
   {% endfor %}
+  <button class="sort-btn" data-sort-key="random">randomize</button>
 </article>
 
 <div id="algContainer">
