@@ -1,6 +1,10 @@
-// Configuration & State
+const SORT_KEYS = {
+  RANDOM: 'random',
+  DEFAULT: 'alg'
+};
+
 const sortState = {
-  sortKey: 'alg',
+  sortKey: SORT_KEYS.DEFAULT,
   ascending: true
 };
 
@@ -13,22 +17,18 @@ const collator = new Intl.Collator(undefined, {
 let container, items, sortButtons, filterGroups;
 
 function init() {
-  // 1. Map the DOM elements
   container = document.getElementById("algContainer");
   items = Array.from(container.children);
   sortButtons = document.querySelectorAll(".sort-btn");
   filterGroups = document.querySelectorAll(".filter-group");
 
-  // 2. Setup UI
   getSessionStorage();
   initFilters();
   bindEvents();
   
-  // 3. Initial Render
   performSort();
   syncVisibility();
   
-  // Update icons if sort was loaded from storage
   const activeBtn = Array.from(sortButtons).find(btn => btn.dataset.sortKey === sortState.sortKey);
   if (activeBtn) updateSortIcons(activeBtn);
 }
@@ -65,7 +65,6 @@ function initFilters() {
     const savedForGroup = savedFilters.find(f => f.key === key)?.checked;
 
     const checkboxesHtml = values.map(val => {
-      // Respect saved state, otherwise default to checked
       const isChecked = savedForGroup ? savedForGroup.includes(val) : true;
       return renderCheckbox(val, isChecked);
     }).join('');
@@ -106,13 +105,11 @@ function bindSortEvents() {
 
 function bindFilterEvents() {
   filterGroups.forEach(group => {
-    // Listen for checkbox changes
     group.addEventListener('change', () => {
       syncVisibility();
       setSessionStorage();
     });
 
-    // Listen for All/None button clicks (Event Delegation)
     group.addEventListener('click', (e) => {
       const action = e.target.dataset.selectAction;
       if (!action) return;
@@ -146,7 +143,10 @@ function updateSortState(newKey) {
 
 function updateSortIcons(activeBtn) {
   sortButtons.forEach(btn => delete btn.dataset.dir);
-  activeBtn.dataset.dir = sortState.ascending ? "asc" : "desc";
+  
+  if (sortState.sortKey !== SORT_KEYS.RANDOM) {
+    activeBtn.dataset.dir = sortState.ascending ? "asc" : "desc";
+  }
 }
 
 function toggleGroupCheckboxes(group, shouldCheck) {
@@ -156,15 +156,25 @@ function toggleGroupCheckboxes(group, shouldCheck) {
 }
 
 function performSort() {
-  items.sort((a, b) => {
-    const valA = a.dataset[sortState.sortKey] || "";
-    const valB = b.dataset[sortState.sortKey] || "";
-    return sortState.ascending 
-      ? collator.compare(valA, valB) 
-      : collator.compare(valB, valA);
-  });
-  
+  if (sortState.sortKey === SORT_KEYS.RANDOM) {
+    shuffleItems();
+  } else {
+    items.sort((a, b) => {
+      const valA = a.dataset[sortState.sortKey] || "";
+      const valB = b.dataset[sortState.sortKey] || "";
+      return sortState.ascending 
+        ? collator.compare(valA, valB) 
+        : collator.compare(valB, valA);
+    });
+  }
   applyOrder();
+}
+
+function shuffleItems() {
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
 }
 
 function applyOrder() {
@@ -192,5 +202,4 @@ function getCheckedValues(group) {
     .map(cb => cb.value);
 }
 
-// Start the application
 init();
