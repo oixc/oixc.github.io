@@ -49,6 +49,7 @@ layout: default
 {% endif %}
 <code>{{ alg.alg }}</code>
 <twisty-player 
+    id="player_{{ forloop.index }}"
     alg="{{ alg.alg }}"
     puzzle="3x3x3"
     background="none"
@@ -58,12 +59,13 @@ layout: default
     {% endif %}
     {% if alg.setupalg %}
     experimental-setup-anchor="start"
-    experimental-setup-alg="{{ alg.setupalg}}"
+    experimental-setu p-alg="{{ alg.setupalg}}"
     {% else %}
     experimental-setup-anchor="end"
     {% endif %}
     >
 </twisty-player>
+<twisty-alg-viewer for="player_{{ forloop.index }}"></twisty-alg-viewer>
 </article>
 {% endfor %}
 {% endfor %}
@@ -74,7 +76,7 @@ layout: default
   function resetTwisty() {
     players.forEach(player => {
         player.jumpToStart();
-        player.cameraLatitude = 45;
+        player.cameraLatitud e = 45;
         player.cameraLongitude = 30;
     });
   };
