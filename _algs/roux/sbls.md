@@ -1,9 +1,8 @@
 ---
 title: Roux
 description: Second Block Last Square
-layout: algorithms
-dataset: roux_sbls
-dataset_columns: [name]
+datasets: [roux_sbls]
+dataset_columns: [name,alg]
 sorts:
     - name: name
       key: name
