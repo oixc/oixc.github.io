@@ -1,9 +1,8 @@
 ---
 title: Roux
 description: Two Look Corners Last Layer (CMLL)
-layout: algorithms
-dataset: roux_two_look_cmll
-dataset_columns: [name,orient_or_permute,comment]
+datasets: [roux_two_look_cmll]
+dataset_columns: [name,alg,orient_or_permute,comment]
 sorts:
     - name: name
       key: name
