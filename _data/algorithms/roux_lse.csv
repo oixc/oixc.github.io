@@ -1,0 +1,8 @@
+name,alg,stickering,bad_edges,looks
+arrow front,M' U' M',L6EO,4,1
+arrow back,M U' M',L6EO,4,1
+a,(M2') (M' U' M'),L6EO,4,2
+b,(M' U' M) (M' U' M'),L6EO,2,2
+c,(M' U2' M') (M' U' M'),L6EO,4,2
+d,(M' U' M') (M' U' M'),L6EO,2,2
+x,(M' U' M') (M' U' M) (M' U' M'),L6EO,6,3
