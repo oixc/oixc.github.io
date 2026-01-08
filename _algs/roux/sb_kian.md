@@ -1,9 +1,8 @@
 ---
 title: Roux
 description: Second Block (Kian)
-layout: algorithms
-dataset: roux_sb_kian
-dataset_columns: [name]
+datasets: [roux_sb_kian]
+dataset_columns: [name,alg]
 sorts:
     - name: name
       key: name
