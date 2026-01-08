@@ -9,6 +9,7 @@ layout: default
 ## First Block
 
 <twisty-player
+  style="width: 10%;"
   experimental-stickering="FirstBlock"
   control-panel="none"
   background="none"
