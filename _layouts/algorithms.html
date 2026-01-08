@@ -59,7 +59,7 @@ layout: default
     {% endif %}
     {% if alg.setupalg %}
     experimental-setup-anchor="start"
-    experimental-setu p-alg="{{ alg.setupalg}}"
+    experimental-setup-alg="{{ alg.setupalg}}"
     {% else %}
     experimental-setup-anchor="end"
     {% endif %}
@@ -76,7 +76,7 @@ layout: default
   function resetTwisty() {
     players.forEach(player => {
         player.jumpToStart();
-        player.cameraLatitud e = 45;
+        player.cameraLatitude = 45;
         player.cameraLongitude = 30;
     });
   };
