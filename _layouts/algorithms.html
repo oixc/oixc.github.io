@@ -47,13 +47,20 @@ layout: default
 {% endif %}
 <code>{{ alg.alg }}</code>
 <twisty-player 
+    alg="{{ alg.alg }}"
     puzzle="3x3x3"
     background="none"
     tempo-scale=1.25
-    experimental-setup-anchor="start"
+    {{ if alg.stickering }} 
     experimental-stickering="{{ alg.stickering }}"
-    alg="{{ alg.alg }}"
-    experimental-setup-alg="{{ alg.setupalg}}">
+    {{ endif }}
+    {{ if alg.setupalg }}
+    experimental-setup-anchor="start"
+    experimental-setup-alg="{{ alg.setupalg}}"
+    {{ else }}
+    experimental-setup-anchor="end"
+    {{ endif }}
+    >
 </twisty-player>
 </article>
 {% endfor %}
