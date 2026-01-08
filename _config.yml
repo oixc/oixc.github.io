@@ -1,4 +1,4 @@
-title: "Cube Algorithms"
+comment: "Cube Algorithms"
 description: "collection of algs"
 url: "https://oixc.github.io"
 baseurl: ""
@@ -23,7 +23,7 @@ defaults:
       dataset_columns: [name,alg]
       sorts:
           - name: name
-            key: comment
+            key: name
       filters:
           - name: name
             key: name
