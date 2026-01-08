@@ -8,6 +8,8 @@ layout: default
 
 ## First Block
 
+<twisty-player alg="R U R' U R U2' R'"></twisty-player>
+
 ## Second Block
 
 ## Last Layer Corners
