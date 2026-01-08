@@ -2,7 +2,7 @@
 title: Petrus
 description: Last Layer
 layout: algorithms
-dataset: petrus
+datasets: [petrus]
 dataset_columns: [name, petrus_step]
 sorts:
     - name: name
