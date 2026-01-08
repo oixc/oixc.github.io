@@ -20,7 +20,7 @@ defaults:
       type: "algs"
     values:
       layout: "algorithms"
-      dataset_columns: [name]
+      dataset_columns: [name,alg]
       sorts:
           - name: name
             key: comment
