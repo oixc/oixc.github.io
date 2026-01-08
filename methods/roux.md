@@ -3,8 +3,6 @@ title: Roux
 description: M slice a lot
 layout: default
 ---
-
-<article>
   
 # Steps
 
@@ -13,8 +11,7 @@ layout: default
 ## Second Block
 
 ## Last Layer Corners
+
 CMLL
 
 ## Last Six Edges
-  
-</article>
