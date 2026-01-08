@@ -8,7 +8,12 @@ layout: default
 
 ## First Block
 
-<twisty-player alg="R U R' U R U2' R'"></twisty-player>
+<twisty-player
+  experimental-stickering="FirstBlock"
+  control-panel="none"
+  background="none"
+  hint-facelets="none">
+</twisty-player>
 
 ## Second Block
 
