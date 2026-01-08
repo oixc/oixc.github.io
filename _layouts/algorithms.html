@@ -1,4 +1,4 @@
----
+ ---
 layout: default
 ---
 
@@ -36,8 +36,10 @@ layout: default
 </article>
 
 <div id="algContainer" data-view="normal">
-{% for alg in site.data.algorithms[page.dataset] %}
+{% for dataset_name in page.datasets] %}
+{% for alg in site.data.algorithms[dataset_name] %}
 <article
+  data-alg_dataset_name="{{ dataset_name }}"
   {% for col in page.dataset_columns %}
   data-{{ col }}="{{ alg[col] }}"{% endfor %}
   >
@@ -63,6 +65,7 @@ layout: default
     >
 </twisty-player>
 </article>
+{% endfor %}
 {% endfor %}
 </div>
 
