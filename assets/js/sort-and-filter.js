@@ -36,28 +36,36 @@ function init() {
 /**
  * Persistence Logic
  */
+function getStorageKey(suffix) {
+  return `${window.location.pathname}_${suffix}`;
+}
+
+const STORAGE_KEYS = {
+  SORT: getStorageKey('sort_state'),
+  FILTER: getStorageKey('filter_state')
+}
 function getSessionStorage() {
-  const savedSort = sessionStorage.getItem('sortState');
+  const savedSort = sessionStorage.getItem(STORAGE_KEYS.SORT);
   if (savedSort) {
     Object.assign(sortState, JSON.parse(savedSort));
   }
 }
 
 function setSessionStorage() {
-  sessionStorage.setItem('sortState', JSON.stringify(sortState));
+  sessionStorage.setItem(STORAGE_KEYS.SORT, JSON.stringify(sortState));
   
   const filterState = Array.from(filterGroups).map(group => ({
     key: group.dataset.filterKey,
     checked: getCheckedValues(group)
   }));
-  sessionStorage.setItem('filterState', JSON.stringify(filterState));
+  sessionStorage.setItem(STORAGE_KEYS.FILTER, JSON.stringify(filterState));
 }
 
 /**
  * Initialization Logic
  */
 function initFilters() {
-  const savedFilters = JSON.parse(sessionStorage.getItem('filterState') || "[]");
+  const savedFilters = JSON.parse(sessionStorage.getItem(STORAGE_KEYS.FILTER) || "[]");
 
   filterGroups.forEach(group => {
     const key = group.dataset.filterKey;
