@@ -43,7 +43,7 @@ layout: default
   >
 <h4>{{ alg.name }}</h4>
 {% if alg.description %}
-  <p>{{ alg.dh4cription }}</p>
+  <p>{{ alg.description }}</p>
 {% endif %}
 <code>{{ alg.alg }}</code>
 <twisty-player 
@@ -51,15 +51,15 @@ layout: default
     puzzle="3x3x3"
     background="none"
     tempo-scale=1.25
-    {{ if alg.stickering }} 
+    {% if alg.stickering %} 
     experimental-stickering="{{ alg.stickering }}"
-    {{ endif }}
-    {{ if alg.setupalg }}
+    {% endif %}
+    {% if alg.setupalg %}
     experimental-setup-anchor="start"
     experimental-setup-alg="{{ alg.setupalg}}"
-    {{ else }}
+    {% else %}
     experimental-setup-anchor="end"
-    {{ endif }}
+    {% endif %}
     >
 </twisty-player>
 </article>
