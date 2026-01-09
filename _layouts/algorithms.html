@@ -47,7 +47,7 @@ layout: default
 {% if alg.description %}
   <p>{{ alg.description }}</p>
 {% endif %}
-<code>{{ alg.alg }}</code>
+<twisty-alg-viewer for="player_{{ forloop.index }}"></twisty-alg-viewer>
 <twisty-player 
     id="player_{{ forloop.index }}"
     alg="{{ alg.alg }}"
@@ -65,7 +65,6 @@ layout: default
     {% endif %}
     >
 </twisty-player>
-<twisty-alg-viewer for="player_{{ forloop.index }}"></twisty-alg-viewer>
 </article>
 {% endfor %}
 {% endfor %}

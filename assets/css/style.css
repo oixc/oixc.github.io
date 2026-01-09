@@ -28,6 +28,7 @@ article h4:first-child {
 
 #algContainer[data-view="training"] h4,
 #algContainer[data-view="training"] p,
+#algContainer[data-view="training"] twisty-alg-viewer,
 #algContainer[data-view="training"] code {
     display: none;
 }
