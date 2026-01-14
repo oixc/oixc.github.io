@@ -7,9 +7,9 @@ sorts:
     - name: name
       key: name
     - name: corner
-      key: corner_RFD
+      key: corner_rfd
     - name: edge
-      key: edge_RF
+      key: edge_rf
     - name: corner_layer
       key: corner_layer
     - name: edge_layer
@@ -17,14 +17,14 @@ sorts:
     - name: moves
       key: move_count
     - name: rank
-      key: alg_rank
+      key: alg_rank_kian
 filters:
     - name: name
       key: name
     - name: corner
-      key: corner_RFD
+      key: corner_rfd
     - name: edge
-      key: edge_RF
+      key: edge_rf
     - name: corner_layer
       key: corner_layer
     - name: edge_layer
@@ -32,7 +32,7 @@ filters:
     - name: moves
       key: move_count
     - name: rank
-      key: alg_rank
+      key: alg_rank_kian
 ---
 
 from [Kian Mansour](https://sites.google.com/view/kianroux/second-block)
